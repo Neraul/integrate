@@ -1,0 +1,169 @@
+body{
+    background-color: #1c3866;
+}
+.navbar-brand {
+	margin-left: 2.5rem;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 30px;
+}
+.b-wipe {
+	text-align: center;
+
+	background: linear-gradient(
+		45deg,
+		#1c3866 20%,
+		#40a9e8 40%,
+		#ffa049 60%,
+		#f2598f 80%
+	);
+	background-size: 200% auto;
+
+	color: #000;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: shine 5s linear infinite;
+}
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.nav-item:hover::after {
+	width: 75%;
+}
+.nav-item.short:hover::after {
+	width: 65%;
+}
+
+.nav-item::after {
+	content: '';
+	display: block;
+	width: 0px;
+	height: 4px;
+	background: #f2598f;
+	transition: 0.2s;
+	margin-top: -10px;
+}
+
+.nav-link {
+	font-size: large;
+	font-weight: bolder;
+	margin-right: 3rem;
+}
+input[type="file"]{
+    display:none;
+}
+.custom-image-upload{
+    border: 1px solid rgb(163, 163, 163);
+    background-color:white;
+    font-weight:bolder;
+    font-size:20px;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius:50%;
+    position:relative; left: 11rem; top:16rem;
+    z-index: 1;
+}
+.container.reg{
+    background-color: white;
+}
+
+button:hover {
+	opacity: 0.8;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: #1c3866;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #2b5497
+}
+
+.profile-button:focus {
+    background: #1c3866;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #1c3866;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 13px;
+	font-weight: 600;
+}
+
+select {
+	appearance: none;
+	background-color: transparent;
+	border: 1px solid rgb(163, 163, 163);
+	border-radius: 20% 0 0 0;
+	padding: 0 1em 0 0;
+	margin: 0;
+	width: 100%;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: inherit;
+	line-height: inherit;
+  }
+.social:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+.social {
+	-webkit-transform: scale(0.8);
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+#social-fb {
+	color: #19323c;
+	opacity: 0.5;
+	border: none;
+}
+
+#social-tw {
+	color: #19323c;
+	opacity: 0.5;
+	border: none;
+}
+
+#social-gp {
+	color: #19323c;
+	opacity: 0.5;
+	border: none;
+}
+
+#social-fb:hover {
+	color: #3b5998;
+	opacity: 1;
+}
+#social-tw:hover {
+	color: #4099ff;
+	opacity: 1;
+}
+#social-gp:hover {
+	color: #d34836;
+	opacity: 1;
+}

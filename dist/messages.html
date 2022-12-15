@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Integ{rate}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3a1db7efb4.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/messages.css">
+</head>
+
+<body class="bg-dark" style="overflow: hidden;">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.html">Integ<span class="b-wipe">{rate}</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+            aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="#navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item top">
+                    <a class="nav-link" href="home.html">Find A Friend!</a>
+                </li>
+                <li class="nav-item short">
+                    <a class="nav-link" style="cursor: pointer;">Message</a>
+                </li>
+                <li class="nav-item short">
+                    <a class="nav-link" href="groups.html">Groups</a>
+                </li>
+                <li class="nav-item short">
+                    <a class="nav-link" href="profile.html">Profile</a>
+                </li>
+                <button class="logout" id="logout-button"><i class="fa-solid fa-power-off"></i></button>
+            </ul>
+        </div>
+    </nav>
+    <div class="row main-container">
+        <div class="col-lg-5 col-sm-12">
+            <div class="card">
+                <button class="new-btn"><span><i class="far fa-comment-dots"></i> Chat </span></button>
+                <div class="card-body">
+                    <div class="nav user-list flex-column nav-pills" id="new-chat" role="tablist"
+                        aria-orientation="vertical">
+                        <ul id="userList">
+                            <li>
+                                <a class="nav-link users active" data-toggle="pill" href="#" role="tab"
+                                    aria-selected="true"><img class="mb-1" src="images/Avatar.png" alt="" width="30"
+                                        height="30" class="d-inline-block align-text-top"> John
+                                    Doe <span class="badge">3</span></a>
+                            </li>
+                            <li>
+                                <a class="nav-link users" data-toggle="pill" href="#" role="tab"
+                                    aria-selected="false"><img class="mb-1" src="images/Avatar.png" alt="" width="30"
+                                        height="30" class="d-inline-block align-text-top"> Jane Doe <span
+                                        class="badge">3</span></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 col-sm-12">
+                <div class="chat_window">
+                    <div class="top_menu">
+                        <nav class="navbar navbar-light">
+                            <div class="container-fluid">
+                                <span class="navbar-brand title">Chat</span>
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <a class="nav-link"><img class="mb-1 d-inline-block align-text-top"
+                                                src="images/Avatar.png" alt="" width="30" height="30">
+                                            John Doe
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+
+                    <ul class="messages"></ul>
+                    <div class="bottom_wrapper clearfix">
+                        <div class="message_input_wrapper">
+                            <input class="message_input" placeholder="Type your message here..." />
+                        </div>
+                        <div class="send_message">
+                            <div class="icon"></div>
+                            <div class="text">Send</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message_template">
+                    <li class="message">
+                        <img class="avatar" src="images/Avatar.png" alt="">
+                        <div class="text_wrapper">
+                            <div class="text"></div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+<<<<<<< HEAD
+    <script src="./script/index.js" async="defer"></script>
+    <script src="script/messages.js"></script>
+=======
+    <script src="./script/messages.js"></script>
+>>>>>>> 11521e7676e293c132a730d493130d75defaf785
+</body>
+
+</html>

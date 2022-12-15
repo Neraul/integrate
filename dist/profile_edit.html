@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Integ{rate}</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script src="https://kit.fontawesome.com/3a1db7efb4.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/profile_edit.css">
+</head>
+
+<body>
+  <div class="container reg"
+    style="margin-top:2%; margin-bottom:2%; border-radius:3%; border: 1px solid rgb(163, 163, 163)">
+    <div class="container rounded bg-white mt-5 mb-5">
+      <div class="row">
+        <div class="col-md-3 border-right">
+          <label for="profile_pic" class="custom-image-upload">
+            <i class="fa fa-plus"></i>
+            <input id="profile_pic" type="file" accept="image/*" name="user_photos">
+          </label>
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+            <div id="display_pic"><img class="rounded-circle mt-5" width="150px"
+                src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg">
+            </div>
+            <div class="align-items-center text-center" style="position:relative; bottom:70px;">
+              <img class="rounded-circle mt-5" width="50px" src="images/profilesmall1.png">
+              <img class="rounded-circle mt-5" width="50px" src="images/profilesmall2.png">
+              <img class="rounded-circle mt-5" width="50px" src="images/profilesmall3.png">
+            </div>
+            <span class="text-black-50" style="position:relative; bottom:40px;" id="display_email"></span><span>
+            </span>
+            <div>
+              <button class="fa fa-facebook-square fa-3x social" id="social-fb"></button>
+              <button class="fa fa-twitter-square fa-3x social" id="social-tw"></button>
+              <button class="fa fa-brands fa-instagram fa-3x social" id="social-gp"></button>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 border-right">
+          <div class="p-3 py-5">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+              <h4 class="text-right">Profile Settings</h4>
+            </div>
+            <div class="row mt-1">
+              <div class="col-md-6"><label class="labels">Name</label><input type="text" id="first_name"
+                  name="user_name" class="form-control" placeholder="First name" value=""></div>
+              <div class="col-md-6"><label class="labels">Surname</label><input type="text" id="surname"
+                  name="user_surname" class="form-control" placeholder="Surname" value=""></div>
+            </div>
+            <div class="col-md-12"><label class="labels">Gender</label>
+              <select id="gender" class="form-control" required>
+                <option value="-">-</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="row mt-3">
+              <div class="col-md-12"><label class="labels">Location</label><input type="text" id="location"
+                  name="user_location" class="form-control" placeholder="Enter your location" value=""></div>
+              <div class="col-md-12"><label class="labels">Birthday</label><input type="date" id="birthday"
+                  name="user_birthday" class="form-control" value=""></div>
+              <div class="col-md-12"><label class="labels">University</label><input type="text" id="university"
+                  name="user_university" class="form-control" placeholder="Enter your university" value=""></div>
+              <div class="row mt-6">
+                <div class="col-md-6"><label class="labels">Course</label><input type="text" id="course"
+                    name="user_course" class="form-control" placeholder="Enter your course" value=""></div>
+                <div class="col-md-6"><label class="labels">Course Year</label><input type="text" id="course_year"
+                    name="user_course_year" class="form-control" placeholder="Enter your course year" value=""></div>
+              </div>
+              <div class="col-md-12"><label class="labels">Hobbies</label><input type="text" name="user_hobbies"
+                  class="form-control" placeholder="Enter your hobbies" value=""></div>
+              <div class="col-md-12"><label class="labels">Interests</label><input type="text" name="user_interests"
+                  class="form-control" placeholder="Enter your interests" value=""></div>
+            </div>
+            <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button"
+                onclick="createProfile()">Save Profile</button></div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-3 py-5">
+            <div class="d-flex justify-content-between align-items-center bio">
+              <h4 class="text-right">*Edit Your Bio*</h4>
+            </div><br>
+            <div class="col-md-12"><label class="labels">Enter details you would like to share about
+                yourself.</label><textarea class="form-control" name="user_bio" style="height:300px; max-height: 420px;"
+                placeholder="-" value=""></textarea></div> <br>
+            <div class="col-md-12"><label class="labels">Additional Details</label><input type="text"
+                name="user_additional_bio" class="form-control" placeholder="additional details" value=""></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <script src="./script/index.js" async="defer"></script>
+</body>
+
+</html>

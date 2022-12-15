@@ -1,0 +1,334 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+h1 {
+	color: #426696;
+	font-weight: 600;
+	font-size: 3rem;
+	opacity: 0.8;
+}
+
+h2,
+h3 {
+	color: #426696;
+	font-weight: 600;
+	opacity: 0.8;
+}
+
+h5 {
+	font-family: 'Fredoka One', cursive;
+	font-size: 2rem;
+}
+
+main {
+	font-family: 'Poppins', sans-serif;
+	min-height: 100vh;
+	background-color: #1c3866;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar-brand {
+	margin-left: 2.5rem;
+	font-family: 'Permanent Marker', cursive;
+	font-size: 30px;
+}
+.b-wipe {
+	text-align: center;
+
+	background: linear-gradient(
+		45deg,
+		#1c3866 20%,
+		#40a9e8 40%,
+		#ffa049 60%,
+		#f2598f 80%
+	);
+	background-size: 200% auto;
+
+	color: #000;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	animation: shine 5s linear infinite;
+}
+@keyframes shine {
+	to {
+		background-position: 200% center;
+	}
+}
+
+.nav-item:hover::after {
+	width: 75%;
+}
+.nav-item.short:hover::after {
+	width: 65%;
+}
+
+.nav-item::after {
+	content: '';
+	display: block;
+	width: 0px;
+	height: 4px;
+	background: #f2598f;
+	transition: 0.2s;
+	margin-top: -10px;
+}
+
+.nav-link {
+	font-size: large;
+	font-weight: bolder;
+	margin-right: 3rem;
+}
+
+.glass {
+	background: white;
+	height: 120vh;
+	width: 60%;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+	border-radius: 2rem;
+	z-index: 2;
+	backdrop-filter: blur(2rem);
+	display: flex;
+}
+.circle1,
+.circle2 {
+	height: 20rem;
+	width: 20rem;
+	position: absolute;
+	border-radius: 50%;
+}
+
+.circle1 {
+	background: white;
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 160, 73, 0.8),
+		rgba(255, 255, 255, 0.3)
+	);
+	top: 10%;
+	right: 10%;
+}
+.circle2 {
+	background: white;
+	background: linear-gradient(
+		to right bottom,
+		rgba(242, 89, 143, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+	top: 82%;
+	left: 8%;
+}
+.dashboard {
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+	border-radius: 2rem;
+}
+
+.pro {
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+	border-radius: 2rem;
+	color: white;
+	padding: 1rem;
+	margin-left: 10%;
+	margin-bottom: 5%;
+	position: relative;
+	text-align: center;
+	width: 80%;
+}
+
+.mycontainer {
+	background: linear-gradient(
+		to left top,
+		rgba(255, 255, 255, 0.8),
+		rgba(255, 255, 255, 0.5)
+	);
+	border-radius: 1rem;
+	padding: 2rem;
+	box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+	height: 100%;
+}
+
+.social:hover {
+	-webkit-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+}
+.social {
+	-webkit-transform: scale(0.8);
+
+	-moz-transform: scale(0.8);
+	-o-transform: scale(0.8);
+	-webkit-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-o-transition-duration: 0.5s;
+}
+
+#social-fb {
+	color: #19323c;
+	opacity: 0.5;
+}
+
+#social-tw {
+	color: #19323c;
+	opacity: 0.5;
+}
+
+#social-gp {
+	color: #19323c;
+	opacity: 0.5;
+}
+
+#social-fb:hover {
+	color: #3b5998;
+	opacity: 1;
+}
+#social-tw:hover {
+	color: #4099ff;
+	opacity: 1;
+}
+#social-gp:hover {
+	color: #d34836;
+	opacity: 1;
+}
+.carousel {
+	border-radius: 3.125rem;
+	overflow: hidden;
+}
+.carousel-item {
+	height: 25rem;
+}
+.carousel-item img {
+	width: 90%;
+	height: 100% !important;
+	object-fit: contain;
+	margin-left: 10%;
+	padding-bottom: 10%;
+	border-radius: 2rem;
+}
+
+.carousel-inner,
+.carousel,
+.carousel-item,
+.carousel-container {
+	margin-left: 3%;
+	margin-top: 5%;
+	width: 90%;
+	background-position: center center;
+	background-size: cover;
+}
+
+.carousel-item-prev:not(.carousel-item-end),
+.active.carousel-item-start {
+	transform: translate3d(0, -100%, 0);
+	-webkit-transform: translate3d(0, -100%, 0);
+	-moz-transform: translate3d(0, -100%, 0);
+	-ms-transform: translate3d(0, -100%, 0);
+	-o-transform: translate3d(0, -100%, 0);
+}
+
+.carousel-item-next:not(.carousel-item-start),
+.active.carousel-item-end {
+	transform: translate3d(0, 100%, 0);
+	-webkit-transform: translate3d(0, 100%, 0);
+	-ms-transform: translate3d(0, 100%, 0);
+	-moz-transform: translate3d(0, 100%, 0);
+	-o-transform: translate3d(0, 100%, 0);
+}
+
+.carousel-indicators {
+	height: 1.25rem;
+	top: 95%;
+}
+
+.carousel-indicators [data-bs-target] {
+	background: none;
+	border: 0.125rem solid white;
+	border-radius: 0.75rem;
+	width: 0.75rem;
+	height: 0.75rem;
+}
+
+.carousel-indicators li.active {
+	background: white;
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+	width: 4rem;
+	height: 4rem;
+	position: fixed;
+	top: 70%;
+	left: 66.5%;
+	transform: translate(-50%, -50%) rotate(90deg);
+	z-index: -1;
+}
+
+.carousel-control-prev-icon {
+	top: 5%;
+}
+
+.unclickable {
+	pointer-events: none;
+}
+
+.clickable {
+	pointer-events: all;
+}
+
+.btns {
+	background: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.7),
+		rgba(255, 255, 255, 0.3)
+	);
+	border-radius: 2rem;
+	padding: 1rem;
+	margin-top: 80%;
+	margin-left: 47%;
+	position: absolute;
+	text-align: center;
+	width: 40%;
+}
+
+.btn {
+	border: none;
+}
+
+#btnX:hover {
+	color: rgb(213, 56, 56);
+}
+
+#btnH:hover {
+	color: rgb(53, 182, 53);
+}
+
+#btnX:active,
+#btnH:active {
+	transform: translateY(4px);
+}
+.logout{
+    background-color: red;
+    border: 0px;
+    margin-right: 20px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.logout:hover{
+    background-color:rgb(173, 4, 4);
+}
